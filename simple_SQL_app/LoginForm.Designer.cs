@@ -34,10 +34,12 @@
             this.LoginLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.link_to_registration = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LoginButton
             // 
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Location = new System.Drawing.Point(371, 378);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
@@ -90,11 +92,26 @@
             this.PasswordTextBox.TabIndex = 4;
             this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
+            // link_to_registration
+            // 
+            this.link_to_registration.AutoSize = true;
+            this.link_to_registration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.link_to_registration.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.link_to_registration.Location = new System.Drawing.Point(352, 417);
+            this.link_to_registration.Name = "link_to_registration";
+            this.link_to_registration.Size = new System.Drawing.Size(113, 13);
+            this.link_to_registration.TabIndex = 6;
+            this.link_to_registration.Text = "Зарегистрироваться";
+            this.link_to_registration.Click += new System.EventHandler(this.link_to_registration_Click);
+            this.link_to_registration.MouseEnter += new System.EventHandler(this.link_to_registration_MouseEnter);
+            this.link_to_registration.MouseLeave += new System.EventHandler(this.link_to_registration_MouseLeave);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.link_to_registration);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.LoginLabel);
@@ -103,6 +120,7 @@
             this.Controls.Add(this.LoginButton);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +134,6 @@
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label link_to_registration;
     }
 }

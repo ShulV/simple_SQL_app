@@ -1,6 +1,6 @@
 ﻿namespace simple_SQL_app
 {
-    partial class Registration
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.RegistrationLabel = new System.Windows.Forms.Label();
             this.RegisterButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PasswordLabel
@@ -82,26 +83,38 @@
             // 
             // RegisterButton
             // 
-            this.RegisterButton.Location = new System.Drawing.Point(340, 396);
+            this.RegisterButton.Location = new System.Drawing.Point(340, 334);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(134, 23);
             this.RegisterButton.TabIndex = 6;
             this.RegisterButton.Text = "Зарегистрироваться";
             this.RegisterButton.UseVisualStyleBackColor = true;
             // 
-            // Registration
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(683, 406);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 12;
+            this.cancelButton.Text = "Назад";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.LoginLabel);
             this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.RegistrationLabel);
             this.Controls.Add(this.RegisterButton);
-            this.Name = "Registration";
+            this.Name = "RegistrationForm";
             this.Text = "Registration";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistrationForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +128,6 @@
         private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.Label RegistrationLabel;
         private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

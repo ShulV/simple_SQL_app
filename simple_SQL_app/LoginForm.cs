@@ -35,6 +35,7 @@ namespace simple_SQL_app
 
             Console.Read();
         }
+        
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -68,6 +69,28 @@ namespace simple_SQL_app
                 MessageBox.Show("YEAH!");
             else
                 MessageBox.Show("Nooo!");
+        }
+
+        private void link_to_registration_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
+            this.Hide();
+        }
+
+        private void link_to_registration_MouseEnter(object sender, EventArgs e)
+        {
+            this.link_to_registration.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Underline, GraphicsUnit.Point, ((byte)(204)));
+        }
+
+        private void link_to_registration_MouseLeave(object sender, EventArgs e)
+        {
+            this.link_to_registration.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
