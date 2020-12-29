@@ -18,17 +18,21 @@ namespace simple_SQL_app
         // Connection String.
         static string connectionString = "Server=" + host + ";Database=" + database
             + ";port=" + port + ";User Id=" + username + ";password=" + password;
+        MySqlConnection connection;
 
-        MySqlConnection connection = new MySqlConnection(connectionString);
 
+        public DataBase()
+        {
+            connection = new MySqlConnection(connectionString);
+        }
         public void closeConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Closed)
+            if (connection.State == System.Data.ConnectionState.Open)
                 connection.Close();
         }
         public void openConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (connection.State == System.Data.ConnectionState.Closed)
                 connection.Open();
         }
 
