@@ -44,6 +44,7 @@
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Войти";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // AuthorizationLabel
             // 
@@ -87,6 +88,7 @@
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(255, 20);
             this.PasswordTextBox.TabIndex = 4;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // LoginForm
             // 

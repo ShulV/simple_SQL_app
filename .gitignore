@@ -338,3 +338,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/simple_SQL_app/Registration.resx
+/simple_SQL_app/Registration.Designer.cs
+/simple_SQL_app/Registration.cs
