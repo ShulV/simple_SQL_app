@@ -65,8 +65,13 @@ namespace simple_SQL_app
             //заполняем объект-Table данными, полученными после выполнения команды
             adapter.Fill(data_table);
             //если Table чем-то заполнилось, значит в БД нашлось совпадение
-            if (data_table.Rows.Count > 0)
+            if (data_table.Rows.Count > 0) {
                 MessageBox.Show("YEAH!");
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                this.Hide();
+            }
+                
             else
                 MessageBox.Show("Nooo!");
         }
